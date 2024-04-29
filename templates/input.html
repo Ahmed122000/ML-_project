@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title> Model page</title>
+    
+    <style>
+        .title{
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 20px;
+        }
+
+        .form{
+            padding-left: 30px;
+        }
+
+        .options{
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+
+        .buttons{
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body> 
+    <h3 class ='title'> Training model</h3>
+    <form action="/predict" method ='get' class="form">
+        
+        <div class ='options'>
+            <label for="fname"> city development index</label><br>
+            <input class="form-control" type="text" name = 'city development' placeholder="enter your city development index" aria-label="default input example">
+        </div>
+        
+        <div class = 'options'>
+            <label for="fname">gender</label><br>
+            <select name="gender" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> male</option>
+                <option value= 1> female</option>
+                <option value= 2> other</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">relevant experience </label><br>
+            <select name="relevant experience" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> has no relevant experience</option>
+                <option value= 1> has relevant experience </option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">enrolled university</label><br>
+            <select name="enrolled university" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> no enrollment</option>
+                <option value= 1> full time course</option>
+                <option value= 2> part time course</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">education level</label><br>
+            <select name="education level" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> graduate</option>
+                <option value= 1>masters</option>
+                <option value= 2> high school</option>
+                <option value= 3> phd</option>
+                <option value= 4> primary school</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">major discipline</label><br>
+            <select name="major discipline" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> STEM</option>
+                <option value= 1> humanities</option>
+                <option value= 3> business degree</option>
+                <option value= 4> arts</option>
+                <option value= 5> no major</option>
+                <option value= 2> other</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">experience</label><br>
+            <select name="experience" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> less than year </option>
+                <option value= 1>1</option>
+                <option value= 2> 2</option>
+                <option value= 3> 3</option>
+                <option value= 4>4</option>
+                <option value= 5>5</option>
+                <option value= 6> 6</option>
+                <option value= 7>7</option>
+                <option value= 8>8</option>
+                <option value= 9> 9</option>
+                <option value= 10>10</option>
+                <option value= 11> 11</option>
+                <option value= 12> 12</option>
+                <option value= 13>13</option>
+                <option value= 14> 14</option>
+                <option value= 15>15</option>
+                <option value= 16> 16</option>
+                <option value= 17>17</option>
+                <option value= 18> 18</option>
+                <option value= 19> 19</option>
+                <option value= 20>20</option>
+                <option value= 1> more than 20 years</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">company size</label><br>
+            <select name="company size" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 5> less than 10 employee</option>
+                <option value= 3> 10-49</option>
+                <option value= 0> 50-99 </option>
+                <option value= 1> 100-500</option>
+                <option value= 6> 500+ - 999</option>
+                <option value= 4>1000 - 4999</option>
+                <option value= 7> 5000-9999</option>
+                <option value= 2>10000+</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">company type</label><br>
+            <select name="company type" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value=0> Pvt Ltd</option>
+                <option value=1> Funded Startup</option>
+                <option value=2> Public Sector</option>
+                <option value=3> early sate startup</option>
+                <option value=4> NGO</option>
+                <option value=5> other</option>
+            </select>
+        </div>
+
+        <div class = 'options'>
+            <label for="fname">last new job</label><br>
+            <select name="last new job" class="form-select form-select-lg mb-3"  saria-label=".form-select-lg example">
+                <option value= 0> never</option>
+                <option value= 1>1</option>
+                <option value= 2> 2</option>
+                <option value= 3> 3</option>
+                <option value= 4>4</option>
+                <option value= 10> 4+</option>
+            </select>
+        </div>
+
+        <div class ='options'>
+            <label for="fname"> training hours</label><br>
+            <input class="form-control" type="number" name = 'training hours' placeholder="enter training hours" aria-label="default input example">
+        </div>
+        
+        <!-- button to move to the next page after selecting-->
+        <div class = 'buttons'>
+            <button class="btn btn-primary"  type="submit"> result </button>
+            <button class="btn btn-primary" onClick="location.href='/'" type="button"> Return to main page </button>
+        </div>
+        
+    </form>
+    
+    
+</body>

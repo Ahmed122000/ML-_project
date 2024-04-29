@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title> evaluation page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style> 
+        
+        .title{
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 20px;
+        }
+        
+        .report{
+            width: 50%;
+        }
+
+        .score{
+            font-weight: bold;
+            font-size: large;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = 'title'>{{model}} model evalution</h1>
+
+    <p class = 'eval'>
+        <div class = 'report'>
+            {{report | safe}}
+        </div>
+        <div class ='score'>
+            train_score is: {{train_score}}<br>
+            test-score is: {{test_score}}<br>
+        </div>
+        
+        
+    </p>
+
+    <button class="btn btn-primary" onClick="location.href='/'" type="button"> main page</button>
+</body>
