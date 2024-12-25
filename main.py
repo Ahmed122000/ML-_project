@@ -3,8 +3,7 @@ from train import train
 from predict import prediction
 
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+
 
 app = Flask(__name__)
 
